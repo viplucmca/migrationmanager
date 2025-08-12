@@ -1,0 +1,609 @@
+---
+FieldType: Button
+FieldName: mg.title
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: miss
+FieldStateOption: mr
+FieldStateOption: mrs
+FieldStateOption: ms
+---
+FieldType: Text
+FieldName: mg.title other
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: mg.comm
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: No
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: mg.oth mig
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: No
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: mg.oth mig name fam
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.othe mig name giv
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.oth off ph cc
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: mg.oth off ph ac
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: mg.oth mob
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.oth off ph
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: mg.app
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: No
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: mg.prov assist
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Legal
+FieldStateOption: Off
+FieldStateOption: exampt
+FieldStateOption: reg
+---
+FieldType: Button
+FieldName: mg.reason ex
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: close
+FieldStateOption: diplom
+FieldStateOption: nominator
+FieldStateOption: parlia
+FieldStateOption: public
+FieldStateOption: sponsor
+---
+FieldType: Text
+FieldName: mg.name giv
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.postal str
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.postal sub
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.postal cntry
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.postal pc
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.name fam
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.dec date
+FieldFlags: 8388608
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Text
+FieldName: mg.dob
+FieldFlags: 8388608
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Text
+FieldName: mg.mig name fam
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.mig name giv
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.mig agent name org
+FieldFlags: 8392704
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.mig office std
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: mg.mig office sn
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: mg.mig office pn
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.mig mobile pn
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.client name fam
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.client name giv
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.client dob
+FieldFlags: 8388608
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Text
+FieldName: mg.client org name
+FieldFlags: 8392704
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.client diac request id
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.client diac trans id
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: mg.dec 1
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: on
+---
+FieldType: Button
+FieldName: mg.dec 2
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: on
+---
+FieldType: Button
+FieldName: mg.dec 3
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: on
+---
+FieldType: Button
+FieldName: mg.dec 4
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: on
+---
+FieldType: Text
+FieldName: mg.resadd str
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.resadd sub
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.resadd cntry
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.resadd pc
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.off ph cc
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: mg.off ph ac
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: mg.off ph
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.mob
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: mg.also ar
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: No
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: mg.ending ar
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: No
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Button
+FieldName: mg.end comm
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: No
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: Text
+FieldName: mg.email
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.end email
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.end resadd str
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.end resadd sub
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.end resadd cntry
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.end resadd pc
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.end off ph cc
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: mg.end off ph ac
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: mg.end off ph
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.end mob
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.end mig marn num
+FieldFlags: 29360128
+FieldJustification: Left
+FieldMaxLength: 7
+---
+FieldType: Text
+FieldName: mg.marn
+FieldFlags: 29360128
+FieldJustification: Left
+FieldMaxLength: 7
+---
+FieldType: Text
+FieldName: mg.org name
+FieldFlags: 8392704
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: mg.oth marn
+FieldFlags: 29360128
+FieldJustification: Left
+FieldMaxLength: 7
+---
+FieldType: Text
+FieldName: mg.lpn
+FieldFlags: 29360128
+FieldJustification: Left
+FieldMaxLength: 5
+---
+FieldType: Text
+FieldName: mg.oth lpn
+FieldFlags: 29360128
+FieldJustification: Left
+FieldMaxLength: 5
+---
+FieldType: Text
+FieldName: mg.end mig lpn num
+FieldFlags: 29360128
+FieldJustification: Left
+FieldMaxLength: 5
+---
+FieldType: Button
+FieldName: cc.person rec
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: holder
+FieldStateOption: nom
+FieldStateOption: person
+FieldStateOption: proposer
+FieldStateOption: sponsor
+FieldStateOption: visa
+---
+FieldType: Text
+FieldName: cc.name giv 2
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.name fam 2
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.name giv 3
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.name fam 3
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.name fam 4
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.name giv 4
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.name giv 5
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.name fam 5
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.name giv 6
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.name fam 6
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.diac id
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.name fam
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.name giv
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.dec date
+FieldFlags: 8388608
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Text
+FieldName: cc.dob
+FieldFlags: 8388608
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Button
+FieldName: cc.dec 2
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: on
+---
+FieldType: Button
+FieldName: cc.dec 3
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: on
+---
+FieldType: Button
+FieldName: cc.dec 4
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: on
+---
+FieldType: Button
+FieldName: cc.dec 1
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: on
+---
+FieldType: Text
+FieldName: cc.resadd str
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.resadd sub
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.resadd cntry
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.resadd pc
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.off ph cc
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: cc.off ph ac
+FieldFlags: 8388608
+FieldJustification: Center
+---
+FieldType: Text
+FieldName: cc.off ph
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.mob
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: cc.org name
+FieldFlags: 8392704
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: ta.assist
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: Application
+FieldStateOption: Cancellation
+FieldStateOption: Off
+FieldStateOption: Specific
+---
+FieldType: Text
+FieldName: ta.type
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: ta.lodged
+FieldFlags: 8388608
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Button
+FieldName: ta.not yet
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: IAAAS
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: ta.specific matter
+FieldFlags: 8392704
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: ta.diac request id
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: ta.diac trans id
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: ta.typecancel
+FieldFlags: 8388608
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: ta.lodgedcancel
+FieldFlags: 8388608
+FieldJustification: Left
+FieldMaxLength: 11
+---
+FieldType: Button
+FieldName: ar.also
+FieldFlags: 0
+FieldJustification: Left
+FieldStateOption: No
+FieldStateOption: Off
+FieldStateOption: Yes
+---
+FieldType: 
+FieldName: ar
+FieldFlags: 0
+FieldJustification: Left
