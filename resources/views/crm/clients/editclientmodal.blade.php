@@ -112,7 +112,43 @@
 			</div>
 			<div class="modal-body">
 			<?php
-				$testscores = \App\Models\TestScore::where('client_id', $fetchedData->id)->where('type', 'client')->first();
+				// Fetch test scores using the new ClientTestScore model
+				$testScores = \App\Models\ClientTestScore::where('client_id', $fetchedData->id)->get();
+				
+				// Map test scores by test_type for easy access
+				$toeflScore = $testScores->where('test_type', 'TOEFL')->first();
+				$ieltsScore = $testScores->where('test_type', 'IELTS')->first();
+				$pteScore = $testScores->where('test_type', 'PTE')->first();
+				$satIScore = $testScores->where('test_type', 'SAT_I')->first();
+				$satIIScore = $testScores->where('test_type', 'SAT_II')->first();
+				$greScore = $testScores->where('test_type', 'GRE')->first();
+				$gmatScore = $testScores->where('test_type', 'GMAT')->first();
+				
+				// Create a compatibility object to match old structure
+				$testscores = (object)[
+					'toefl_Listening' => $toeflScore?->listening ?? '',
+					'toefl_Reading' => $toeflScore?->reading ?? '',
+					'toefl_Writing' => $toeflScore?->writing ?? '',
+					'toefl_Speaking' => $toeflScore?->speaking ?? '',
+					'score_1' => $toeflScore?->overall_score ?? '',
+					'toefl_Date' => ($toeflScore && $toeflScore->test_date) ? date('d/m/Y', strtotime($toeflScore->test_date)) : '',
+					'ilets_Listening' => $ieltsScore?->listening ?? '',
+					'ilets_Reading' => $ieltsScore?->reading ?? '',
+					'ilets_Writing' => $ieltsScore?->writing ?? '',
+					'ilets_Speaking' => $ieltsScore?->speaking ?? '',
+					'score_2' => $ieltsScore?->overall_score ?? '',
+					'ilets_Date' => ($ieltsScore && $ieltsScore->test_date) ? date('d/m/Y', strtotime($ieltsScore->test_date)) : '',
+					'pte_Listening' => $pteScore?->listening ?? '',
+					'pte_Reading' => $pteScore?->reading ?? '',
+					'pte_Writing' => $pteScore?->writing ?? '',
+					'pte_Speaking' => $pteScore?->speaking ?? '',
+					'score_3' => $pteScore?->overall_score ?? '',
+					'pte_Date' => ($pteScore && $pteScore->test_date) ? date('d/m/Y', strtotime($pteScore->test_date)) : '',
+					'sat_i' => $satIScore?->overall_score ?? '',
+					'sat_ii' => $satIIScore?->overall_score ?? '',
+					'gre' => $greScore?->overall_score ?? '',
+					'gmat' => $gmatScore?->overall_score ?? '',
+				];
 				?>
 				<form method="post" action="{{URL::to('/edit-test-scores')}}" name="testscoreform" autocomplete="off" id="testscoreform" enctype="multipart/form-data">
 				@csrf 
