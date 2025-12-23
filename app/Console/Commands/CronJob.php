@@ -145,7 +145,8 @@ class CronJob extends Command
 			}
 			
 		}
-		/* \DB::table('users')
+		/* REMOVED: users table has been dropped
+		\DB::table('users')
             ->where('id', 1)
             ->update(['course_level' => str_random(10)]);
          Mail::send('emails.test', [], function($message)

@@ -5746,39 +5746,9 @@ class ClientsController extends Controller
                 }
             }
 
-            //appointments
-            $appointments = DB::table('appointments')->where('client_id', $request->merge_from)->get(); //dd($appointments);
-            if(!empty($appointments)){
-                foreach($appointments as $appkey=>$appval){
-                    DB::table('appointments')->insert(
-                        [
-                            'user_id'=> $appval->user_id,
-                            'client_id' => $request->merge_into,
-                            'service_id' => $appval->service_id,
-                            'noe_id' => $appval->noe_id,
-                            'full_name' => $appval->full_name,
-                            'email' => $appval->email,
-                            'phone' => $appval->phone,
-                            'timezone' => $appval->timezone,
-                            'date' => $appval->date,
-                            'time' => $appval->time,
-                            'timeslot_full' => $appval->timeslot_full,
-                            'title' => $appval->title,
-                            'description' => $appval->description,
-                            'invites' => $appval->invites,
-                            'appointment_details' => $appval->appointment_details,
-                            'status' => $appval->status,
-                            'assignee' => $appval->assignee,
-                            'priority' => $appval->priority,
-                            'priority_no' => $appval->priority_no,
-                            'created_at' => $appval->created_at,
-                            'updated_at' => $appval->updated_at,
-                            'related_to' => $appval->related_to,
-                            'order_hash' => $appval->order_hash
-                        ]
-                    );
-                }
-            }
+            //appointments - REMOVED: Old appointments table has been dropped
+            // Appointments are now managed through booking_appointments table
+            // If needed, migrate appointments using BookingAppointment model instead
 
             //quotations
             $quotations = DB::table('quotations')->where('client_id', $request->merge_from)->get(); //dd($quotations);
@@ -5801,34 +5771,9 @@ class ClientsController extends Controller
                 }
             }
 
-            //accounts
-            $accounts = DB::table('invoices')->where('client_id', $request->merge_from)->get(); //dd($accounts);
-            if(!empty($accounts)){
-                foreach($accounts as $acckey=>$accval){
-                    DB::table('invoices')->insert(
-                        [
-                            'invoice_no'=> $accval->invoice_no,
-                            'user_id' => $accval->user_id,
-                            'client_id' => $request->merge_into,
-                            'application_id' => $accval->application_id,
-                            'type' => $accval->type,
-                            'invoice_date' => $accval->invoice_date,
-                            'due_date' => $accval->due_date,
-                            'discount' => $accval->discount,
-                            'discount_date' => $accval->discount_date,
-                            'net_fee_rec' => $accval->net_fee_rec,
-                            'notes' => $accval->notes,
-                            'payment_option' => $accval->payment_option,
-                            'attachments' => $accval->attachments,
-                            'status' => $accval->status,
-                            'currency' => $accval->currency,
-                            'created_at' => $accval->created_at,
-                            'updated_at' => $accval->updated_at,
-                            'profile' => $accval->profile
-                        ]
-                    );
-                }
-            }
+            //accounts - REMOVED: Old invoices table has been dropped
+            // Invoices are now managed through a different system
+            // If needed, implement invoice migration using the new invoice system
 
             // Email history (mail_reports)
             $conversations = DB::table('mail_reports')->where('client_id', $request->merge_from)->get(); //dd($conversations);

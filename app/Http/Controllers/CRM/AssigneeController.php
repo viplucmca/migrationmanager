@@ -526,10 +526,14 @@ class AssigneeController extends Controller
      * @param  \App\Models\Appointment  $appointment
      * @return \Illuminate\Http\Response
      */
-    public function show(Appointment $appointment)
+    /**
+     * DEPRECATED: Old appointment system removed
+     * This method uses the removed Appointment model and will fail.
+     * Use BookingAppointmentsController instead.
+     */
+    public function show($appointment)
     {
-        $appointment=Appointment::with(['user','clients','service','natureOfEnquiry'])->where('id',$appointment->id)->first();
-        return view('crm.appointments.show',compact('appointment'));
+        return redirect()->back()->with('error', 'Old appointment system has been removed. Please use the new booking appointments system.');
     }
 
     /**
@@ -538,10 +542,14 @@ class AssigneeController extends Controller
      * @param  \App\Models\Appointment  $appointment
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, Appointment $appointment)
+    /**
+     * DEPRECATED: Old appointment system removed
+     * This method uses the removed Appointment model and will fail.
+     * Use BookingAppointmentsController instead.
+     */
+    public function edit(Request $request, $appointment)
     {
-        $appointment=Appointment::with(['user','clients','service','natureOfEnquiry'])->where('id',$appointment->id)->first();
-        return view('crm.appointments.edit',compact('appointment'));
+        return redirect()->back()->with('error', 'Old appointment system has been removed. Please use the new booking appointments system.');
     }
 
     /**
@@ -551,25 +559,14 @@ class AssigneeController extends Controller
      * @param  \App\Models\Appointment  $appointment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Appointment $appointment)
+    /**
+     * DEPRECATED: Old appointment system removed
+     * This method uses the removed Appointment model and will fail.
+     * Use BookingAppointmentsController instead.
+     */
+    public function update(Request $request, $appointment)
     {
-        $request->validate([
-            // 'user_id' => 'required|exists:admins,id',
-            'client_id' => 'required|exists:admins,id',
-            'date' => 'required',
-            'time' => 'required',
-            'title' => 'required',
-            'description' => 'required',
-            'invites' => 'required',
-            'status' => 'required',
-        ]);
-
-        $data=$request->all();
-        $data['time']= Carbon::parse($request->time)->format('H:i:s');
-        $appointment->update($data);
-
-        return redirect()->route('appointments.index')
-                        ->with('success','Appointment updated successfully');
+        return redirect()->back()->with('error', 'Old appointment system has been removed. Please use the new booking appointments system.');
     }
 
     /**
@@ -689,7 +686,16 @@ class AssigneeController extends Controller
         }
     }
 
+    /**
+     * DEPRECATED: Old appointment system removed
+     * This method uses the removed Appointment and AppointmentLog models.
+     */
     public function assignedetail(Request $request){
+        return response()->json([
+            'status' => false,
+            'message' => 'Old appointment system has been removed. Please use the new booking appointments system.'
+        ]);
+        /* REMOVED: Old appointment system
         $appointmentdetail = Appointment::with(['user','clients','service','assignee_user','natureOfEnquiry'])->where('id',$request->id)->first();
       ?>
     <div class="modal-header">
@@ -862,10 +868,19 @@ class AssigneeController extends Controller
         </div>
     </div>
     <?php
+        */
 }
 
+/**
+ * DEPRECATED: Old appointment system removed
+ * This method uses the removed Appointment and AppointmentLog models.
+ */
 public function update_appointment_status(Request $request){
-
+    return response()->json([
+        'status' => false,
+        'message' => 'Old appointment system has been removed. Please use the new booking appointments system.'
+    ]);
+    /* REMOVED: Old appointment system
     $objs = Appointment::find($request->id);
 
     if($objs->status == 0){
@@ -911,9 +926,19 @@ public function update_appointment_status(Request $request){
         $response['message']	=	'Please try again';
     }
     echo json_encode($response);
+    */
 }
 
+/**
+ * DEPRECATED: Old appointment system removed
+ * This method uses the removed Appointment and AppointmentLog models.
+ */
 public function update_appointment_priority(Request $request){
+    return response()->json([
+        'status' => false,
+        'message' => 'Old appointment system has been removed. Please use the new booking appointments system.'
+    ]);
+    /* REMOVED: Old appointment system
     $objs = Appointment::findOrFail($request->id);
     $status = $objs->priority;
     if($request->status == 'Low'){
@@ -942,9 +967,19 @@ public function update_appointment_priority(Request $request){
         $response['message']	=	'Please try again';
     }
     echo json_encode($response);
+    */
 }
 
+/**
+ * DEPRECATED: Old appointment system removed
+ * This method uses the removed Appointment model.
+ */
 public function change_assignee(Request $request){
+    return response()->json([
+        'status' => false,
+        'message' => 'Old appointment system has been removed. Please use the new booking appointments system.'
+    ]);
+    /* REMOVED: Old appointment system
     $objs = Appointment::find($request->id);
 
     $objs->assignee = $request->assinee;
@@ -966,9 +1001,19 @@ public function change_assignee(Request $request){
         $response['message']	=	'Please try again';
     }
     echo json_encode($response);
+    */
 }
 
+/**
+ * DEPRECATED: Old appointment system removed
+ * This method uses the removed AppointmentLog model.
+ */
 public function update_apppointment_comment(Request $request){
+    return response()->json([
+        'status' => false,
+        'message' => 'Old appointment system has been removed. Please use the new booking appointments system.'
+    ]);
+    /* REMOVED: Old appointment system
     $objs = new AppointmentLog;
     $objs->title = 'has commented';
     $objs->created_by = Auth::user()->id;
@@ -983,9 +1028,19 @@ public function update_apppointment_comment(Request $request){
         $response['message']	=	'Please try again';
     }
     echo json_encode($response);
+    */
 }
 
+/**
+ * DEPRECATED: Old appointment system removed
+ * This method uses the removed Appointment and AppointmentLog models.
+ */
 public function update_apppointment_description(Request $request){
+    return response()->json([
+        'status' => false,
+        'message' => 'Old appointment system has been removed. Please use the new booking appointments system.'
+    ]);
+    /* REMOVED: Old appointment system
     $objs = Appointment::find($request->id);
     $objs->description = $request->visit_purpose;
     $saved = $objs->save();
@@ -1003,6 +1058,7 @@ public function update_apppointment_description(Request $request){
         $response['message']	=	'Please try again';
     }
     echo json_encode($response);
+    */
 }
 
     //Get All assignee list dropdown

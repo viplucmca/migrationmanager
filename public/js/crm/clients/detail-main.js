@@ -5856,7 +5856,8 @@ Bansal Immigration`;
 
                 $('.services_row').show();
 
-                $('#myTab .nav-item #nature_of_enquiry-tab').addClass('disabled');
+                // REMOVED: nature_of_enquiry tab - table has been dropped
+                // $('#myTab .nav-item #nature_of_enquiry-tab').addClass('disabled');
 
                 $('#myTab .nav-item #services-tab').removeClass('disabled');
 
@@ -5886,7 +5887,8 @@ Bansal Immigration`;
 
             } else {
 
-                var v = 'nature_of_enquiry';
+                // REMOVED: nature_of_enquiry tab - table has been dropped
+                // var v = 'nature_of_enquiry';
 
                 $('.services_row').hide();
 
@@ -5900,7 +5902,8 @@ Bansal Immigration`;
 
                 $('#myTab .nav-item #services-tab').addClass('disabled');
 
-                $('#myTab .nav-item #nature_of_enquiry-tab').removeClass('disabled');
+                // REMOVED: nature_of_enquiry tab - table has been dropped
+                // $('#myTab .nav-item #nature_of_enquiry-tab').removeClass('disabled');
 
                 $('#myTab a[href="#'+v+'"]').trigger('click');
 
