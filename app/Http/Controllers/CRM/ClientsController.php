@@ -5855,42 +5855,6 @@ class ClientsController extends Controller
                 }
             }
 
-            //Tasks
-            $tasks = DB::table('tasks')->where('client_id', $request->merge_from)->get(); //dd($tasks);
-            if(!empty($tasks)){
-                foreach($tasks as $taskkey=>$taskval){
-                    DB::table('tasks')->insert(
-                        [
-                            'title' => $taskval->user_id,
-                            'category' => $taskval->from_mail,
-                            'assignee' => $taskval->to_mail,
-                            'priority' => $taskval->cc,
-                            'due_date' => $taskval->template_id,
-                            'due_time' => $taskval->subject,
-                            'description' => $taskval->message,
-                            'related_to' => $taskval->created_at,
-                            'contact_name' => $taskval->updated_at,
-                            'partner_name' => $taskval->type,
-                            'client_name' => $taskval->reciept_id,
-                            'application' => $taskval->attachments,
-                            'stage' => $taskval->mail_type,
-                            'followers' => $taskval->mail_type,
-                            'attachments' => $taskval->mail_type,
-                            'created_at' => $taskval->mail_type,
-                            'updated_at' => $taskval->mail_type,
-                            'mailid' => $taskval->mail_type,
-                            'user_id' => $taskval->mail_type,
-                            'client_id' => $request->merge_into,
-                            'status' => $taskval->mail_type,
-                            'type' => $taskval->mail_type,
-                            'priority_no' => $taskval->mail_type,
-                            'is_archived' => $taskval->mail_type,
-                            'group_id' => $taskval->mail_type
-                        ]
-                    );
-                }
-            }
-
             //Education
             $educations = DB::table('education')->where('client_id', $request->merge_from)->get(); //dd($educations);
             if(!empty($educations)){
