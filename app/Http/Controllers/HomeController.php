@@ -139,7 +139,12 @@ class HomeController extends Controller
                 }
             }
         }
-        //echo $person_id."===".$service_type; die;
+        // OLD MODELS REMOVED - BookService, BookServiceSlotPerPerson models deleted
+        // This method is part of the old appointment booking system
+        // OLD CONTROLLER REMOVED - AppointmentsController has been deleted
+        return json_encode(array('success'=>false, 'duration' =>0, 'message' => 'Old booking system models removed. Use new booking system at /booking/appointments'));
+        
+        /* COMMENTED OUT - OLD MODELS DELETED
         $bookservice = \App\Models\BookService::where('id', $req_service_id)->first();//dd($bookservice);
         $service = \App\Models\BookServiceSlotPerPerson::where('person_id', $person_id)->where('service_type', $service_type)->first();//dd($service);
 	    if( $service ){
@@ -194,14 +199,15 @@ class HomeController extends Controller
 	    } else {
 		 return json_encode(array('success'=>false, 'duration' =>0));
 	    }
+        */
     }
 
     /**
      * Get disabled date/time - COMMENTED OUT FOR FUTURE USE
-     * This function has been replaced by AppointmentsController::getDisabledDateTime()
-     * which uses the Bansal API REST endpoint.
+     * OLD CONTROLLER REMOVED - AppointmentsController has been deleted
+     * This function was part of the old appointment booking system.
      * 
-     * @deprecated Use AppointmentsController::getDisabledDateTime() instead
+     * @deprecated Old appointment system removed
      */
     /*
     public function getdisableddatetime(Request $request)
@@ -425,10 +431,10 @@ class HomeController extends Controller
 
     /**
      * Get date/time backend - COMMENTED OUT FOR FUTURE USE
-     * This function has been replaced by AppointmentsController::getDateTimeBackend()
-     * which uses the Bansal API REST endpoint.
+     * OLD CONTROLLER REMOVED - AppointmentsController has been deleted
+     * This function was part of the old appointment booking system.
      * 
-     * @deprecated Use AppointmentsController::getDateTimeBackend() instead
+     * @deprecated Old appointment system removed
      */
     /*
     public function getdatetimebackend(Request $request)

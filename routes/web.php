@@ -115,10 +115,13 @@ Route::middleware(['auth:admin'])->group(function() {
     Route::post('/delete_action', [CRMUtilityController::class, 'deleteAction']);
     Route::post('/move_action', [CRMUtilityController::class, 'moveAction']);
 
-    Route::get('/appointments-education', [CRMUtilityController::class, 'appointmentsEducation'])->name('appointments-education');
-    Route::get('/appointments-jrp', [CRMUtilityController::class, 'appointmentsJrp'])->name('appointments-jrp');
-    Route::get('/appointments-tourist', [CRMUtilityController::class, 'appointmentsTourist'])->name('appointments-tourist');
-    Route::get('/appointments-others', [CRMUtilityController::class, 'appointmentsOthers'])->name('appointments-others');
+    /*---------- OLD APPOINTMENT ROUTES - REMOVED ----------*/
+    // These routes pointed to non-existent methods in CRMUtilityController
+    // Old appointment system has been removed - use /booking/appointments instead
+    // Route::get('/appointments-education', [CRMUtilityController::class, 'appointmentsEducation'])->name('appointments-education');
+    // Route::get('/appointments-jrp', [CRMUtilityController::class, 'appointmentsJrp'])->name('appointments-jrp');
+    // Route::get('/appointments-tourist', [CRMUtilityController::class, 'appointmentsTourist'])->name('appointments-tourist');
+    // Route::get('/appointments-others', [CRMUtilityController::class, 'appointmentsOthers'])->name('appointments-others');
 
     Route::post('/add_ckeditior_image', [CRMUtilityController::class, 'addCkeditiorImage'])->name('add_ckeditior_image');
     Route::post('/get_chapters', [CRMUtilityController::class, 'getChapters'])->name('get_chapters');

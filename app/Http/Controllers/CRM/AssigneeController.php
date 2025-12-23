@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Spatie\QueryBuilder\QueryBuilder;
 
-use App\Models\Appointment;
+// OLD MODELS REMOVED - Old appointment booking system models deleted
+// use App\Models\Appointment;
 use App\Models\Note;
-use App\Models\AppointmentLog;
+// use App\Models\AppointmentLog;
 use App\Models\Notification;
 use Carbon\Carbon;
 use App\Models\Admin;
@@ -21,6 +22,17 @@ use Yajra\DataTables\Facades\DataTables;
 use App\Helpers\Utf8Helper;
 use Illuminate\Support\Facades\URL;
 
+/**
+ * OLD APPOINTMENT SYSTEM CONTROLLER
+ * 
+ * WARNING: Some methods in this controller use the old Appointment and AppointmentLog models
+ * which have been DELETED. These methods will fail with "Class not found" errors.
+ * 
+ * Methods that will fail:
+ * - Methods that use Appointment:: or AppointmentLog:: directly
+ * 
+ * Most methods in this controller use Note model and should still work.
+ */
 class AssigneeController extends Controller
 {
     /**

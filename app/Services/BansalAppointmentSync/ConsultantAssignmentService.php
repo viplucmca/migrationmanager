@@ -9,7 +9,7 @@ class ConsultantAssignmentService
 {
     /**
      * Assign consultant based on appointment details
-     * Mimics the 5-calendar logic from AppointmentsController
+     * Mimics the 5-calendar logic (previously from AppointmentsController which has been removed)
      */
     public function assignConsultant(array $appointmentData): ?AppointmentConsultant
     {
